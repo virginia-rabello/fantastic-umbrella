@@ -56,11 +56,12 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  // create a new category
-  // Expected req.body...
-  //{
-  //  category_name: "Jeans"
-  //}
+  /* create a new category
+   Expected req.body...
+  {
+   "category_name": "Jeans"
+  }
+  */
   Category.create(req.body)
   .then(newCategory => res.json(newCategory))
   .catch(err => {

@@ -61,11 +61,12 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  // create a new tag
-  // Expect data..
-  // { 
-  //   "tag_name": "Vintage"
-  // }
+  /* create a new tag
+   Expect data..
+   { 
+     "tag_name": "Vintage"
+   }
+   */
   Tag.create(req.body)
   .then(newTagData => res.status(200).json(newTagData))
   .catch(err => {
